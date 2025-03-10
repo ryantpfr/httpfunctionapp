@@ -9,7 +9,7 @@ app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 def http_trigger(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
-    # text = requests.get("https://www.google.com").text
-    text = "dsdsdsd"
+    text = requests.get("https://www.google.com").text
+    # text = "dsdsdsd"
 
     return func.HttpResponse(text)
